@@ -1,0 +1,109 @@
+body {
+  counter-reset: rule;
+}
+.sp-color {
+  color: #276E6A;
+}
+.sp-bg-color {
+  background-color: #276E6A;
+}
+.sp-width {
+  width: 100%;
+}
+.nav-link:hover {
+  color: #276E6A;
+}
+.sp-img {
+  width: 64px;
+  height: 64px;
+}
+.sp-img img {
+  width: 60%;
+}
+.sp-img + div {
+  width: 50%;
+}
+.sp-effect {
+  position: relative;
+  overflow: hidden;
+}
+.sp-effect:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 10px 20px 5px 25px;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  box-shadow: 0 0 0 30px rgba(50, 50, 50, .1),
+  0 0 0 40px rgba(90, 90, 90, .1),
+  0 0 0 60px rgba(110, 110, 110, .1),
+  0 0 0 80px rgba(140, 140, 140, .1);
+}
+.sp-num {
+  position: relative;
+}
+.sp-num:before {
+  counter-increment: rule;
+  content: counter(rule);
+  font-size: 12rem;
+  color: rgba(110, 110, 110, .1);
+  position: absolute;
+  top: -55px;
+  right: 2px;
+}
+.sp-projects {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  overflow-x: scroll;
+  scroll-snap-type: x;
+}
+.sp-projects a {
+  flex: 1 0 94%;
+  scroll-snap-align: start;
+}
+.sp-projects a img {
+  width: 360px;
+  height: 250px;
+}
+.sp-opinion {
+  width: 64px;
+  height: 64px;
+  background-color: #276E6A;
+  display: grid;
+  place-items: center;
+}
+.sp-opinion img {
+  width: 96%;
+  transform: translateY(2px);
+}
+.sp-opinion + div {
+  width: 100%;
+}
+.sp-contact {
+  color: #F2653F;
+  text-decoration: underline #F2653F dotted;
+}
+.sp-card {
+  min-height: 190px;
+}
+@media screen and (min-width: 768px) {
+  .sp-width {
+    width: 75%;
+  }
+  .sp-img {
+    width: 80px;
+    height: 80px;
+  }
+  .sp-img + div {
+    width: 100%;
+  }
+  .sp-projects a {
+    flex: 1 0 80%;
+  }
+  .sp-opinion + div {
+    width: 75%;
+  }
+}
